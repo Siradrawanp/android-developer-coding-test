@@ -10,7 +10,7 @@ data class Recipe(
     val headlines: String,
     val image: String,
     val name: String,
-    val protein: String,
+    val proteins: String,
     val thumb: String,
     val time: String
 )
