@@ -37,7 +37,7 @@ class Adapter(val context: Context): RecyclerView.Adapter<Adapter.MyViewHolder>(
             .into(holder.recipeImage)
 
         holder.recipeName.text = recipeList.get(position).name
-        holder.recipeHeadline.text = recipeList.get(position).headlines
+        holder.recipeHeadline.text = recipeList.get(position).headline
         holder.recipeDesc.text = recipeList.get(position).description
         holder.recipeCalor.text = recipeList.get(position).calories
         holder.recipeFats.text = recipeList.get(position).fats

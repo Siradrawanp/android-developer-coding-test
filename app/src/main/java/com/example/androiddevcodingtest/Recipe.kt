@@ -7,7 +7,7 @@ data class Recipe(
     val description: String,
     val difficulty: Int,
     val fats: String,
-    val headlines: String,
+    val headline: String,
     val image: String,
     val name: String,
     val proteins: String,
