@@ -2,8 +2,6 @@ package com.example.androiddevcodingtest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
@@ -27,11 +25,16 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recycler_view)
         noInterText = findViewById(R.id.disconnected)
+
+        //setting adapter to recycler view
         recyclerAdapter = Adapter(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = recyclerAdapter
 
+        //GET data from url
         fetchData()
+
+        //swipe down to refresh page
         refreshData()
 
     }
