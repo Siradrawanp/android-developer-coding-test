@@ -7,6 +7,7 @@ import retrofit2.http.GET
 
 interface RetrofitAPI {
 
+    //fungsi mengambil data dari file json api
     @GET("android-test/recipes.json")
     fun getRecipe(): Call<List<Recipe>>
 

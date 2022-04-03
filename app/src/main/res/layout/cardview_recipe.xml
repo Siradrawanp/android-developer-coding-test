@@ -69,57 +69,137 @@
             android:layout_marginBottom="10dp">
 
             <TextView
+                android:id="@+id/card_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="calories :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
                 android:id="@+id/cardview_calories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="calories"
+                android:text="-"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@id/cardview_fats"/>
+                android:layout_toEndOf="@id/card_calories"
+                android:layout_toStartOf="@id/card_fats"
+                android:layout_marginStart="10dp"/>
 
             <TextView
-                android:id="@+id/cardview_fats"
+                android:id="@+id/card_fats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="fats"
+                android:text="fats :"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_centerHorizontal="true"/>
 
             <TextView
+                android:id="@+id/cardview_fats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_toEndOf="@id/card_fats"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/card_proteins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="proteins :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/card_calories"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
                 android:id="@+id/cardview_proteins"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="proteins"
+                android:text="-"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_below="@id/cardview_calories"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="5dp"
-                android:layout_toStartOf="@id/cardview_fats"/>
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/card_proteins"
+                android:layout_below="@id/card_calories"
+                android:layout_toStartOf="@id/card_fats"/>
+
+            <TextView
+                android:id="@+id/card_carbos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="carbos :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/card_proteins"
+                android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@+id/cardview_carbos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="carbos"
+                android:text="-"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_toEndOf="@id/cardview_proteins"
-                android:layout_below="@id/cardview_fats"
-                android:layout_marginTop="5dp"/>
+                android:layout_toEndOf="@id/card_carbos"
+                android:layout_below="@id/card_proteins"
+                android:layout_toStartOf="@id/card_time"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/card_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cooking time :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/card_fats"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/cardview_proteins"/>
+
+            <TextView
+                android:id="@+id/cardview_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/card_fats"
+                android:layout_toEndOf="@id/card_time"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/card_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="difficulty rating :"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/card_time"
+                android:layout_toEndOf="@id/cardview_carbos"/>
 
             <TextView
                 android:id="@+id/cardview_difficulty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:hint="5"
+                android:text="-"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="15dp"/>
+                android:textSize="15sp"
+                android:layout_below="@id/card_time"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/card_difficulty"/>
 
         </RelativeLayout>
 

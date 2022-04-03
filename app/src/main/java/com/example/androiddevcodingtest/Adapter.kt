@@ -24,6 +24,7 @@ class Adapter(val context: Context): RecyclerView.Adapter<Adapter.MyViewHolder>(
         val recipeProtein   : TextView  = itemView.findViewById(R.id.cardview_proteins)
         val recipeCarb      : TextView  = itemView.findViewById(R.id.cardview_carbos)
         val recipeDiff      : TextView  = itemView.findViewById(R.id.cardview_difficulty)
+        val recipeTime      : TextView  = itemView.findViewById(R.id.cardview_time)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.MyViewHolder {
@@ -44,6 +45,7 @@ class Adapter(val context: Context): RecyclerView.Adapter<Adapter.MyViewHolder>(
         holder.recipeProtein.text = recipeList.get(position).proteins
         holder.recipeCarb.text = recipeList.get(position).carbos
         holder.recipeDiff.text = recipeList.get(position).difficulty.toString()
+        holder.recipeTime.text = timeReadable(recipeList.get(position).time)
     }
 
     override fun getItemCount(): Int {
@@ -54,5 +56,9 @@ class Adapter(val context: Context): RecyclerView.Adapter<Adapter.MyViewHolder>(
         this.recipeList = recipeList
         notifyDataSetChanged()
     }
+
+    // fungsi konversi format waktu dari ISO 8601 ke format durasi normal & mudah terbaca
+    fun timeReadable(s: String): String = s.substring(2)
+        .lowercase().replace(Regex("[hms](?!\$)")) { it.value }
 
 }
